@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Custom Theme - KnowledgeHub Design System */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-primary: #1f7a54;
+  --color-primary-hover: #165a3d;
+  --color-background-light: #f9fbfa;
+  --color-background-dark: #18181b;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #27272a;
+  --color-text-main: #101915;
+  --color-text-secondary: #578e77;
+  --color-accent-gold: #B89F6B;
+  --color-border-subtle: #e9f1ee;
+
+  /* Fonts */
+  --font-display: "Epilogue", serif;
+  --font-body: "Manrope", sans-serif;
+
+  /* Shadows */
+  --shadow-whisper: 0 2px 8px -2px rgba(31, 122, 84, 0.08), 0 1px 4px -2px rgba(31, 122, 84, 0.04);
+  --shadow-hover: 0 8px 16px -4px rgba(31, 122, 84, 0.12), 0 2px 4px -1px rgba(31, 122, 84, 0.04);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Dark Mode */
+.dark {
+  --color-background: var(--color-background-dark);
+  --color-surface: var(--color-surface-dark);
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .shadow-whisper {
+    box-shadow: var(--shadow-whisper);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
 }
