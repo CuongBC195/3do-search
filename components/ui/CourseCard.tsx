@@ -31,9 +31,9 @@ export default function CourseCard({
 
             {/* Footer */}
             <div className="mt-auto pt-4 border-t border-border-subtle dark:border-zinc-800 flex items-center justify-end">
-                <span className="flex items-center text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="flex items-center text-xs font-bold text-text-secondary group-hover:text-primary transition-colors">
                     Xem chi tiết
-                    <span className="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                    <span className="material-symbols-outlined text-[16px] ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
                 </span>
             </div>
         </Link>
